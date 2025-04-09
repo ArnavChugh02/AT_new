@@ -1,25 +1,74 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FAFAFA"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clinic Appointment Booking"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:background="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginBottom="24dp"/>
 
     <EditText
         android:id="@+id/etId"
         android:hint="User ID"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50" />
 
     <EditText
         android:id="@+id/etName"
-        android:hint="Name"
+        android:hint="Full Name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#4CAF50" />
+
+    <TextView android:text="Select Doctor"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/spDoctor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextView android:text="Select Date"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Date"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#333333"
+        android:layout_marginTop="8dp"/>
+
+    <TextView android:text="Select Time"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold" />
 
     <Spinner
         android:id="@+id/spTime"
@@ -30,6 +79,10 @@
         android:id="@+id/btnBook"
         android:text="Book Appointment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#673AB7"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
 </LinearLayout>
+</ScrollView>
