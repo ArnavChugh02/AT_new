@@ -1,4 +1,4 @@
-package com.example.lab7q1;
+package com.example.dbprac;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -27,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
         btnView = findViewById(R.id.btnView);
 
         btnAdd.setOnClickListener(v -> {
+            if(rollNo.getText().toString().isEmpty()){
+                showToast("Roll no required");
+                return;
+            }
+            if(!rollNo.getText().toString().trim().matches("\\d+")){
+                showToast("Enter number");
+                return;
+            }
             boolean inserted = db.insertStudent(
                     rollNo.getText().toString(),
                     name.getText().toString(),
